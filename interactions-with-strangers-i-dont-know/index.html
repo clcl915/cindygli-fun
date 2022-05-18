@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactions with Strangers I don't know</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="contentText">
+        
+        <h3 id="back">
+          <a href="https://www.cindygli.com">
+          <span class="material-icons-round" style="font-size:10px">
+            keyboard_backspace
+            </span>
+            CINDYGLI.COM
+          </a>
+        </h3>
+        <h1>Interactions with Strangers I don't know</h1>
+        <p>I recorded my data everyday by jotting down interactions with security guards, staff workers, random people, etc. I also recorded some properties of each interaction which include: duration (in seconds), who, where, type of interaction, and my reaction.</p>
+        <p>made with vanilla js and d3</p>
+      </div>
+
+      <div id="visualization">
+        <div id="vizContainerFront"></div>
+        <div id="vizContainerMiddle"></div>
+        <div id="vizContainerBack"></div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/front.js"></script>
+    <script type="text/javascript" src="js/middle.js"></script>
+    <script type="text/javascript" src="js/back.js"></script>
+    <script type="text/javascript" src="js/sharedFunctions.js"></script>
+  </body>
+</html>

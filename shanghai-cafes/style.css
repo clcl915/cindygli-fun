@@ -63,6 +63,10 @@ h1{
 #back{
   cursor: pointer;
 }
+a{
+  color: inherit;
+  text-decoration: none;
+}
 @media screen and (max-width: 953px) {
   #container{
     display: flex !important;

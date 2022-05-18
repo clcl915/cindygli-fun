@@ -1,0 +1,113 @@
+*{
+  transition: cubic-bezier(.19,1,.22,1) 2s;
+}
+body{
+  width:100%;
+  height: 100%;
+  margin: 0;
+  text-align: start;
+  font-family: 'Hubballi', cursive;
+}
+#container{
+  height: 95vh;
+  margin: 2rem;
+  color:black;
+  transition: cubic-bezier(.19,1,.22,1) 2s;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1%;
+}
+h1{
+  font-size: 2.5rem;
+}
+p{
+  font-size: 16px;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+#visualization{
+  width: 65%;
+  color: white;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 2s;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1%; */
+}
+#vizContainerFront, #vizContainerMiddle, #vizContainerBack{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  /* margin: 10rem 0; */
+}
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 66%; /* aspect ratio */
+  vertical-align: top;
+  overflow: hidden;
+}
+.middle-svg-container{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 33%; /* aspect ratio */
+  vertical-align: top;
+  overflow: hidden;
+}
+.back-svg-container{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 79%; /* aspect ratio */
+  vertical-align: top;
+  overflow: hidden;
+}
+.svg-content-responsive {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+#title{
+    z-index: 2;
+}
+#contentText{
+  width: 25%;
+  margin-left: 2em;
+  position: fixed;
+  padding: 20px;
+  height: 100vh;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#back{
+  cursor: pointer;
+}
+@media screen and (max-width: 953px) {
+  #container{
+    display: flex !important;
+    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+  #contentText{
+    width: 80%;
+  }
+  #visualization{
+    width: 90%;
+  }
+  #key{
+    border: none;
+  }
+}

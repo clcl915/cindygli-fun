@@ -1,0 +1,205 @@
+:root {
+   --pixel-size: 2px;
+   --grid-cell: calc( var(--pixel-size) * 16);
+}
+
+body{
+  object-fit: contain;
+  font-family: 'VT323', monospace;
+  color:#666666;
+  font-size: 20px;
+  margin: auto;
+  text-align: center;
+  width: 100vw;height: 100vh;
+  overflow: hidden;
+  image-rendering: pixelated;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.camera {
+   /* width: 100vw;
+   height: 100vh; */
+   width: calc(29 * var(--grid-cell));
+   height: calc(11 * var(--grid-cell));
+  /* background-image: url(assets/static-bg.png); */
+   overflow: hidden;
+   position:relative;
+}
+.backgroundContainer{
+  image-rendering: pixelated;
+  background-image: url(assets/cindyroom-bkg.png);
+  width: calc(115 * var(--grid-cell));
+  height: calc(10 * var(--grid-cell));
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#dino {
+  height: 96px;
+  width: 96px;
+  position: absolute;
+  image-rendering: pixelated;
+  background: url("assets/dino-spritesheet.png")
+    0px 0px;
+  /* width: calc( var(--grid-cell)* 6 );
+  height: calc( var(--grid-cell)* 6 ); */
+  left:calc(var(--pixel-size) * 25);
+  bottom:calc(var(--pixel-size) * 29);
+}
+.dinoAnimation{
+  animation: play 0.7s steps(10) infinite;
+}
+@keyframes play {
+  100% {
+    background-position: -944px;
+  }
+}
+.flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome{
+  width: calc( var(--grid-cell)* 3.5);
+  position:relative;
+  left:calc(var(--pixel-size) * 57);
+  top:calc(var(--pixel-size) * 35);
+  color:white;
+}
+.instructions{
+  width: calc( var(--grid-cell)* 8 );
+  position:absolute;
+  color:#1a4e44;
+  left:calc(var(--pixel-size) * 160);
+  top:calc(var(--pixel-size) * 20);
+  font-size:25px;
+  font-weight: 800;
+  animation: blinker 1.5s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.projNames{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* color:white; */
+  /* left:calc(var(--pixel-size) * 200); */
+  /* top:calc(var(--pixel-size) * 130); */
+}
+.projNames > *{
+    color: white;
+    text-decoration: none;
+}
+
+.projNames > *:hover{
+    color:#0060B6;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+#mini1{
+  position: relative;
+  left:calc(var(--pixel-size) * 229);
+  top:calc(var(--pixel-size) * 20);
+}
+#mini2{
+  position: relative;
+  left:calc(var(--pixel-size) * 149);
+  top:calc(var(--pixel-size) * 20);
+}
+#mini3{
+  position: relative;
+  left:calc(var(--pixel-size) * 78);
+  top:calc(var(--pixel-size) * 20);
+}
+#big1{
+  position: relative;
+  left: calc(var(--pixel-size) * 26);
+  top: calc(var(--pixel-size) * 5);
+}
+#mini4{
+  position: relative;
+  left: calc(var(--pixel-size) * -33);
+  top: calc(var(--pixel-size) * 20);
+}
+#mini5{
+  position: relative;
+  left:calc(var(--pixel-size) * -111);
+  top:calc(var(--pixel-size) * 20);
+}
+#big2{
+  position: relative;
+  left: calc(var(--pixel-size) * -168);
+  top: calc(var(--pixel-size) * 5);
+}
+#mini6{
+  position: relative;
+  left:calc(var(--pixel-size) * -227);
+  top:calc(var(--pixel-size) * 20);
+}
+#mini7{
+  position: relative;
+  left:calc(var(--pixel-size) * -308);
+  top:calc(var(--pixel-size) * 20);
+}
+#big3{
+  position: relative;
+  left:calc(var(--pixel-size) * -368);
+  top:calc(var(--pixel-size) * 8);
+}
+@media (min-width: 320px) {
+
+}
+@media (min-width: 768px) {
+  .welcome{
+    color: #25656c;
+    width: calc( var(--grid-cell)* 5);
+    left: calc(var(--pixel-size) * 50);
+  }
+  .instructions{
+    left:calc(var(--pixel-size) * 100)
+  }
+  #dino{
+    bottom: calc(var(--pixel-size) * 26);
+  }
+}
+@media (min-width: 1024px) {
+  .instructions{
+    left:calc(var(--pixel-size) * 65)
+  }
+  .welcome{
+    color: white;
+    width: calc( var(--grid-cell)* 3.5);
+    left: calc(var(--pixel-size) * 57);
+  }
+}
+@media (min-width: 1220px) {
+  .instructions{
+    left: calc(var(--pixel-size) * 90);
+  }
+}
+@media (min-width: 1440px) {
+  .instructions{
+    left:calc(var(--pixel-size) * 120)
+  }
+}
+@media( min-width: 700px ) {
+  :root {
+     --pixel-size: 3px;
+  }
+}
+@media( min-width: 1000px ) {
+  :root {
+     --pixel-size: 4px;
+  }
+  #dino{
+   bottom: calc(var(--pixel-size) * 29);
+ }
+}

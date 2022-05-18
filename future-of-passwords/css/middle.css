@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+body{
+    margin: 0;
+}
+.container{
+    width:100vw;
+    height: 100vh;
+    font-family: 'Fira Mono', monospace;
+}
+.s1,.s6,.s7{
+    background-color: rgb(14, 14, 14);
+    color:white;
+}
+.s2,.s3,.s4,.s5,.s8{
+    background-color: #fafafa;
+    color:#888;
+}
+section{
+    width:100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    text-align: start;
+}
+.content{
+    width:80vw;
+    margin: auto;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2%;
+}
+.column{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.s5 img{
+    width:15%;
+}
+h1{
+    font-size: 4rem;
+}
+.s1 h1{
+    color:#888;
+}
+.s1 span{
+    font-size: 8rem;
+    font-weight: 900;
+    color: white;
+}
+.s8 .content h3 span{
+  font-weight: bolder;
+  color: black;
+  font-size: 30px;
+}
+.s8 .flex{
+    justify-content: end;
+    gap: 2%;
+}
+.s8 img{
+    float: right;
+    width: 5%;
+    -webkit-animation: bounceRight 2s infinite;
+    animation: bounceRight 2s infinite;
+}
+.s8 img:hover{
+  cursor: pointer;
+}
+.headline{
+    display: inline-block;
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+.headline:before,
+.headline:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.headline:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+.headline:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
+
+@keyframes bounceRight {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      -ms-transform: translateX(0);
+      transform: translateX(0);
+    }
+    40% {
+      -ms-transform: translateX(-10px);
+      transform: translateX(-10px);
+    }
+    60% {
+      -ms-transform: translateX(-1px);
+      transform: translateX(-1px);
+    }
+  }
